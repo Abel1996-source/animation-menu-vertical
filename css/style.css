@@ -1,0 +1,149 @@
+    @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-color: #180108;
+        font-family: "Muli", serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    nav {
+        position: relative;
+        background-color: #8a0a37;
+        height: 500px;
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0px 0px 0px 0px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        transition: width 0.6s linear;
+        overflow-x: hidden;
+    }
+    
+    nav.active {
+        width: 350px;
+        border-radius: 15px 0px 0px 15px;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        left: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: width 0.6s linear;
+        border: 0;
+    }
+    
+    nav.active ul {
+        width: 100%;
+    }
+    
+    nav ul li {
+        padding: 15px;
+        transform: rotateY(0deg);
+        opacity: 0;
+        cursor: pointer;
+        transition: transform 0.6s linear, opacity 0.6s linear;
+    }
+    
+    nav.active ul li {
+        opacity: 1;
+        cursor: pointer;
+        transition: opacity 0.3s linear;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2rem;
+    }
+    
+    .nav {
+        border-right: 10px solid #fd7e14;
+    }
+    
+    nav.active {
+        border-right: 10px solid #fd7e14;
+    }
+    
+    .lidesign {
+        border-radius: 20px 0px 0px 20px;
+        background-color: #fd7e14;
+        transition: all .6s linear;
+    }
+    
+    nav ul li a i {
+        padding: 3px 20px 3px 0px;
+    }
+    
+    #icon {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 20px;
+        height: 50px;
+        right: 25px;
+        width: 50px;
+        border-radius: 50%;
+        border: 0;
+        background: 0;
+        background-color: #df1159c5;
+        cursor: pointer;
+    }
+    
+    #icon i {
+        font-size: 2rem;
+        color: #fff;
+    }
+    
+    nav.active #icon i {
+        transform: rotate(180deg);
+        transition: transform 0.6s linear;
+    }
+    
+    nav #icon i {
+        transform: rotate(360deg);
+        transition: transform 0.6s linear;
+    }
+    
+    nav .element {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 500px;
+        opacity: 1;
+        transition: opacity 0.6s linear;
+    }
+    
+    nav.active .element {
+        opacity: 0;
+        transition: opacity 0.6s linear;
+    }
+    
+    .element i {
+        padding: 18px 50px;
+        font-size: 1.2rem;
+        color: #fff;
+    }
+    
+    nav.active .element i {
+        transform: rotate(360deg);
+        opacity: 0;
+        transition: transform 0.6s linear, opacity 0.1s linear;
+    }
